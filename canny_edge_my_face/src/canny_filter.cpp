@@ -18,6 +18,7 @@ class CannyEdge
 public:
   CannyEdge();
   void process_callback(const sensor_msgs::ImageConstPtr& img);
+
 };
 
 CannyEdge::CannyEdge():it(n)
@@ -56,6 +57,7 @@ void CannyEdge::process_callback(const sensor_msgs::ImageConstPtr& img)
   pub.publish(out);
 
 }
+
 int main(int argc, char **argv)
 {
   ros::init(argc,argv,"canny_edge_my_face");
@@ -63,4 +65,5 @@ int main(int argc, char **argv)
   ros::spin();
 
   return 0;
+
 }
